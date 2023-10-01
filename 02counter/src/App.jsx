@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -11,8 +9,10 @@ function App() {
 
   const increase = () =>{
     if(count<20){
-      count=count+1;
-      setCount(count);
+      // count=count+1;
+      setCount(prevcount => prevcount+1);
+      setCount(prevcount => prevcount+1);
+      setCount(prevcount => prevcount+1);
       console.log(count);
     }else{
       console.log(count);
@@ -21,8 +21,10 @@ function App() {
   }
   const decrease = () =>{
     if(count>0){
-      count=count-1;
-      setCount(count);
+      // count=count-1;
+      setCount(prevcount => prevcount-1);
+      setCount(prevcount => prevcount-1);
+      setCount(prevcount => prevcount-1);
       console.log(count);
     }else{
       console.log(count);
