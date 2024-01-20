@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom'
 
 function Github() {
     const data = useLoaderData();
+    console.log(data);
 
     // useEffect(()=>{
     //     fetch("https://api.github.com/users/facebook")
@@ -14,7 +15,10 @@ function Github() {
     // },[data])
 
   return (
-    <div className='bg-black font-bold text-4xl py-3 text-white text-center'>Github Followers: {data.followers}</div>
+    <div className='bg-black font-bold text-4xl py-3 text-white text-center'>
+      Github Followers: {data.followers}
+      <img className='h-80 w-auto' src={data.avatar_url} alt="" />
+      </div>
   )
 }
 
