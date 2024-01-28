@@ -10,9 +10,7 @@ function App() {
   const Dispatch = useDispatch()
 
   useEffect(()=>{
-    // console.log("hello");
     const todo = JSON.parse(localStorage.getItem("todos"))
-    // console.log(todo);
     if(todo && todo.length>0){
       Dispatch(getTodo(todo))
     }    
