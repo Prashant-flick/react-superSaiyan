@@ -18,8 +18,8 @@ function App() {
       // console.log("here");
       const auth = JSON.parse(localStorage.getItem("auth"))
       const data = JSON.parse(localStorage.getItem("data"))
-      dispatch(getItem(data))
-      dispatch(getauth(auth))
+      if(data)dispatch(getItem(data))
+      if(auth)dispatch(getauth(auth))
     })
 
     useEffect(()=>{

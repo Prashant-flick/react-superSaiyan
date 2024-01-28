@@ -18,7 +18,7 @@ const authSlice = createSlice({
         logout: (state) => {
             state.status=false
             state.userData = null
-            console.log(state);
+            // console.log(state);
             localStorage.setItem("auth", JSON.stringify(state))
         },
         getauth: (state, action) => {

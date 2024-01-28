@@ -5,7 +5,7 @@ import {Button, Input, Select, RTE} from '../index'
 import appwriteService from '../../appwrite/config'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { add } from '../../store/databaseSlice'
+import { add, update } from '../../store/databaseSlice'
 
 function PostForm({post}) {
     const navigate = useNavigate()
@@ -41,6 +41,8 @@ function PostForm({post}) {
             )
                 
             if(dbPost){
+                console.log(dbPost);
+                dispatch(update(dbPost))
                 navigate(`/post/${dbPost.$id}`)
             }
         }else{

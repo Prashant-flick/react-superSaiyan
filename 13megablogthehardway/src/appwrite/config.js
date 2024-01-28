@@ -115,6 +115,17 @@ class Service{
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId,
+            1200,               //width
+            0,                  //height
+            'center',           // crop center  
+            '30',               // slight compression
+            5,                  // border width    
+            'CDCA30',           // border color
+            15,                 // border radius
+            1,                  // full opacity
+            0,                  // no rotation
+            'FFFFFF',           // background color
+            'jpg' 
         )
     }
 }
